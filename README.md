@@ -4,7 +4,7 @@ You can click the Preview link to take a look at your changes.
 --->
 
 👋 Hi there!
-My name is Guilherme and I'm a Data Analyst at bunq. I'm originally from Rio, Brazil, and currently live in Amsterdam, NL. 
+My name is Guilherme and I'm a Data Analyst at bunq. I'm originally from Rio, Brazil, and I currently live in Amsterdam, NL. 
 On this github I store my sideprojects.
 
 🔭 I’m currently working at bunq and creating my personal portfolio website.
