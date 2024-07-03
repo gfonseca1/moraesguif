@@ -4,8 +4,9 @@ You can click the Preview link to take a look at your changes.
 --->
 
 👋 Hi there!
-My name is Guilherme and I'm a Data Analyst at bunq. I'm originally from Rio, Brazil, and I currently live in Amsterdam, NL. 
-On this github I store my sideprojects.
+My name is Guilherme and I'm a Data Scientist at bunq. I'm originally from Rio de Janeiro, Brazil, and I currently live in Amsterdam, The Netherlands. 
+
+On this repository I store my side projects.
 
 🌱 I’m currently learning more about Python (pandas, numpy, matplotlib), SQL, dbt and Looker (LookML).
 
@@ -13,3 +14,4 @@ On this github I store my sideprojects.
 <!---
 or check my homepage https://portfoliolink.com
 -->
+

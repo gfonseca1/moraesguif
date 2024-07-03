@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pytest
+ruff
+pip-tools
+pre-commit
