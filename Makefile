@@ -31,10 +31,15 @@ format:
 
 # Sync dependencies
 sync:
-	$(ACTIVATE) && pip-compile requirements.in
-	$(ACTIVATE) && pip-sync requirements.txt
+	$(ACTIVATE) && cp requirements.txt requirements.in && \
+	pip-compile --upgrade --output-file requirements.txt requirements.in && \
+	rm requirements.in && \
+	pip-sync requirements.txt
 
 # Clean up compiled Python files and cache
 clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
+
+dashboard:
+	$(ACTIVATE) && cd personal_finance_dashboard && streamlit run dashboard.py

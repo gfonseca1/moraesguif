@@ -8,10 +8,10 @@ My name is Guilherme and I'm a Data Scientist at bunq. I'm originally from Rio d
 
 On this repository I store my side projects.
 
-🌱 I’m currently learning more about Python (pandas, numpy, matplotlib), SQL, dbt and Looker (LookML).
+🌱 I’m currently learning more about Python (pandas, numpy, matplotlib), SQL, dbt, Airflow, etc.
 
 📫 Get in touch: moraesguif@gmail.com 
 <!---
-or check my homepage https://portfoliolink.com
+or check my linkedin https://www.linkedin.com/in/gmfonseca/
 -->
 
