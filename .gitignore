@@ -87,3 +87,14 @@ venv.bak/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# dbt specific
+dbt_packages/
+logs/
+target/
+dbt_modules/
+.user.yml
+
+# DuckDB database files
+*.duckdb
+*.duckdb.wal

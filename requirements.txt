@@ -4,3 +4,5 @@ pytest
 ruff
 pip-tools
 pre-commit
+dbt-core
+dbt-duckdb
