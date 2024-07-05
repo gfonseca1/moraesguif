@@ -1,4 +1,4 @@
-.PHONY: tests requirements sync
+.PHONY: tests requirements sync format clean dashboard
 
 # Default Python interpreter
 PYTHON := python3
@@ -12,9 +12,10 @@ ACTIVATE := . $(VENV)/bin/activate
 # Install dependencies
 requirements:
 	$(PYTHON) -m venv $(VENV)
-	$(ACTIVATE) && pip-compile
+	$(ACTIVATE) && pip install pip-tools
+	$(ACTIVATE) && pip-compile requirements.in
 
-# Run tests and ruff
+# Run tests and linting
 tests:
 	$(ACTIVATE) && ruff check --fix .
 	$(ACTIVATE) && ruff format .
@@ -22,12 +23,9 @@ tests:
 
 # Format code
 format:
-	@echo
-	@echo 'Formatting side-project'
-	$(ACTIVATE) && ruff check --fix .
+	@echo 'Formatting project'
+	$(ACTIVATE) && ruff check --fix --show-fixes .
 	$(ACTIVATE) && ruff format --line-length 120 .
-	@echo
-	@echo
 
 # Sync dependencies
 sync:
@@ -37,6 +35,11 @@ sync:
 clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
+	rm -rf $(VENV)
 
+# Run dashboard
 dashboard:
-	$(ACTIVATE) && cd personal_finance_dashboard && streamlit run dashboard.py
+	$(ACTIVATE) && streamlit run personal_finance_dashboard/dashboard.py
+
+# Development setup
+dev-setup: requirements sync
