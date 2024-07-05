@@ -12,7 +12,7 @@ ACTIVATE := . $(VENV)/bin/activate
 # Install dependencies
 requirements:
 	$(PYTHON) -m venv $(VENV)
-	$(ACTIVATE) && pip install -r requirements.txt
+	$(ACTIVATE) && pip-compile
 
 # Run tests and ruff
 tests:
@@ -31,10 +31,7 @@ format:
 
 # Sync dependencies
 sync:
-	$(ACTIVATE) && cp requirements.txt requirements.in && \
-	pip-compile --upgrade --output-file requirements.txt requirements.in && \
-	rm requirements.in && \
-	pip-sync requirements.txt
+	$(ACTIVATE) && pip-sync requirements.txt
 
 # Clean up compiled Python files and cache
 clean:
